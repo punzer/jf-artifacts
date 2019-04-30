@@ -1,2 +1,17 @@
-docker build -t jf-test-0:latest .
-docker run -p 5000:5000 jf-test-0
+Instructions to get the container working on local setup
+
+To build the container
+$ docker build -t jf-test-0:latest .
+
+To run the container
+$ docker run -p 5000:5000 jf-test-0
+
+To get the top 2 downloads:
+$ curl http://0.0.0.0:5000/ 
+{
+  "jcenter-cache/asm/asm-tree/3.3/asm-tree-3.3.jar": 5, 
+  "jcenter-cache/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar": 5
+}
+
+Since we make multiple API requests in the backend, it takes about 8-10 secs to complete the above API request.
+Error messages will be printed on the console running the container.
