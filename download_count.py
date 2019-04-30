@@ -3,8 +3,7 @@
 """
 import requests
 import json
-from flask import Flask, Response
-from flask import jsonify
+from flask import Flask, Response, jsonify
 
 SERVER_IP = "35.232.202.36"
 AUTH_HEADER = {"Authorization": "Basic YWRtaW46Nm0xVGRhblNpYg=="}
